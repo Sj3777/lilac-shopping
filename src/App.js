@@ -8,6 +8,7 @@ import Register from './pages/Register/Register'
 import Test from './pages/Test'
 import { useSelector, useDispatch } from 'react-redux'
 import { getProducts as AllProducts } from './redux/actions/productAction'
+// import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
 
   

@@ -19,6 +19,7 @@
   .search .logo img {
     width: 10vw;
     height: auto;
+    cursor: pointer;
   }
   .search .width {
     width: 0%;
@@ -200,4 +201,3 @@
       height: 10vh;
     }
   }
-  
