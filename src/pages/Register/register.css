@@ -1,0 +1,128 @@
+/* login */
+
+.container_login {
+    width: 70%;
+    height: 80%;
+    background-color: #f3f5f9;
+    position: absolute;
+    border-radius: 20px;
+    display: flexbox;
+  }
+  
+  .main_login_container {
+    background-image: linear-gradient(to left bottom, #e3dca0, #f5c78e, #ffb08d, #ff999d, #ff89b9, #ff86b5, #ff84b0, #ff81ac, #ff9282, #ffb261, #dfd55d, #a3f386);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+  }
+  
+  .left_box_r {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    float: right;
+    width: 40%;
+    height: 100%;
+    background-image: linear-gradient(to left bottom, #00f9e3, #00e6ff, #00cdff, #27acff, #aa81ff, #c067ea, #d246cf, #e000af, #cd00b0, #b900b2, #a300b2, #8c01b2);
+    
+  }
+  
+  .right_box_r {
+    padding: 30px;
+    float: left;
+    width: 60%;
+    height: 100%;   
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #fdfdfd;
+    
+  }
+  
+  .right_box_r h4 {
+    padding-left: 10px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #e94560;
+  }
+  
+  .right_box_r p {
+    padding-left: 10px;
+    font-size: 2vw;
+    font-weight: 400;
+    color: #ff81ac;
+  }
+  .logo_cont{
+      display: flex;
+      justify-content: center;
+      margin-top: 50%;
+  }
+  .logo_def {
+    width: 180px;
+    height: 100px;
+  }
+  
+  .input_box {
+    width: 80%;
+    height: 40px;
+    border: 2px solid rgb(244, 242, 243);
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 12px;
+  }
+  .input_box input, input::placeholder{
+    font-size: 12px;
+  }
+  
+  .input_con_r {
+    padding: 1px;
+  }
+  
+  .input_con_r label {
+    margin-left: 5px;
+    font-size: 12px;
+  }
+  
+  .sign_button {
+    width: 80%;
+    height: 40px;
+    border-radius: 20px;
+    padding: 10px;
+    margin-left: 5px;
+    margin-top: 20px;
+    background-color: #ec657c;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  .right_box h5{
+    justify-content: center;
+    align-items: center;
+  }
+  .social_icon_r{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    padding: 2px;
+  }
+  .icon_stl_r{
+    margin-top: 10%;
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .icon_sz{
+    width: 30px;
+    height: 30px;
+  }
+  .register_here{
+    margin-left: 15px;
+  }
+  .go_btn {
+    color: #ec657c;
+    background: none;
+    cursor: pointer;
+  }
+  

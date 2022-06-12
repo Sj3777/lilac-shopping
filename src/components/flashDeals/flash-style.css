@@ -1,0 +1,37 @@
+.flash {
+  background: #f6f9fc;
+  padding: 50px 0;
+}
+.cont_scroll{
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  width: auto;
+  height: 380px;
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+}
+::-webkit-scrollbar-thumb {
+  width: 1px;
+  height: 0px;
+  background: rgb(234, 234, 231);
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+/* ::-webkit-scrollbar:hover {
+  background: #afafaf; 
+} */
+.box_flash{
+  width: 250px;
+  margin: 10px;
+  border-radius: 20px;
+  /* background-color: aquamarine; */
+}
+.product_flash{
+  padding: 15px;
+  border-radius: 20px;
+  width: 220px;
+  background-color: rgb(255, 255, 255);
+}
