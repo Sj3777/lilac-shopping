@@ -30,8 +30,10 @@
   /* background-color: aquamarine; */
 }
 .product_flash{
-  padding: 15px;
   border-radius: 20px;
   width: 220px;
   background-color: rgb(255, 255, 255);
+}
+.price h4{
+  color: #3187ED;
 }

@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FiPlus, FiMinus } from "react-icons/fi";
 import { API } from "../../config";
 import axios from "axios";
+import './cart-style.css'
+import { useSelector, useDispatch } from "react-redux";
+import { addProductToCart, listCartItems, removeProductFromCart } from "../../redux/actions/cartAction";
 // export default function cartCard(item) {
 
 //     // const updateCart = (item) => {
@@ -23,9 +26,40 @@ import axios from "axios";
 //     )
 // }
 
-function cartCard(item) {
-  const productQty = Number(item.cartItem.product_id.p_price) * item.cartItem.product_qty;
-  const data = item.cartItem.product_id
+function CartCard(item) {
+  const dispatch = useDispatch();
+  const data = item.cartItem.product_id;
+  const getItemQty = useSelector((state) => state.cartItemList.cartItems)
+  // console.log( "=======cart qty change------", getItemQty);
+  const addItemToCartHandler = () => {
+    // console.log("----clicked", item)
+    const cred = {
+      product_id: item.cartItem.product_id._id,
+      cart_action: true,
+    };
+    dispatch(addProductToCart(cred))
+  };
+  const removeItemFromCartHandler = () => {
+    // console.log("----clicked", item)
+    const cred = {
+      product_id: item.cartItem.product_id._id,
+      cart_action: false,
+    };
+    dispatch(addProductToCart(cred))
+  };
+
+  const handlecartItemDelete = () => {
+    const cred = {product_id: data._id}
+    dispatch(removeProductFromCart(cred))
+  }
+  const productQty =
+    Number(item.cartItem.product_id.p_price) * item.cartItem.product_qty;
+  
+  // const [qty, setQty] = useState(item.cartItem.product_qty);
+  // useEffect(()=>{
+  //   dispatch(listCartItems())
+  // },[dispatch])
+  // console.log("-----itemmmmmmmmm", item.cartItem)
   return (
     <>
       <div className="cart-list product d_flex" key={item.id}>
@@ -34,6 +68,7 @@ function cartCard(item) {
         </div>
         <div className="cart-details">
           <h3>{data.p_name}</h3>
+          <h5>{data.p_description}</h5>
           <h4>
             ${data.p_price}.00 * {item.cartItem.product_qty}
             <span>${productQty}.00</span>
@@ -42,15 +77,18 @@ function cartCard(item) {
         <div className="cart-items-function">
           <div className="removeCart">
             <button className="removeCart">
-              <i className="fa-solid fa-xmark"></i>
+              <i className="fa-solid fa-xmark item_cursor" onClick={handlecartItemDelete}></i>
             </button>
           </div>
           <div className="cartControl d_flex">
-            <button className="incCart">
+            <button className="incCart item_cursor" onClick={addItemToCartHandler}>
               <FiPlus />
             </button>
             <p>{item.cartItem.product_qty}</p>
-            <button className="desCart">
+            {/* <input
+              readonly
+            /> */}
+            <button className="desCart item_cursor"  onClick={removeItemFromCartHandler}>
               <FiMinus />
             </button>
           </div>
@@ -62,4 +100,4 @@ function cartCard(item) {
   );
 }
 
-export default cartCard;
+export default CartCard;

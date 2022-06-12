@@ -1,10 +1,17 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import logo from "../../components/assets/images/Logo.png"
 import { useNavigate } from "react-router-dom"
 import {FaShoppingCart} from 'react-icons/fa'
 import {IoPersonSharp, IoSearch} from "react-icons/io5";
-const Search = ({ CartItem }) => {
-
+import {useSelector, useDispatch} from "react-redux"
+import { listCartItems } from '../../redux/actions/cartAction'
+const Search = () => {
+  const dispatch = useDispatch();
+  const cartSize = useSelector((state) => state.cartItemList.cartItems.length);
+  console.log("-----cart len", cartSize);
+  useEffect(() => {
+    dispatch(listCartItems());
+  }, [dispatch]);
   const history = useNavigate()
   // fixed Header
   window.addEventListener("scroll", function () {
@@ -35,7 +42,7 @@ const Search = ({ CartItem }) => {
             <div className='cart'>
               <div onClick={goCart}>
               <FaShoppingCart className="search_icon"/>
-                <span>{CartItem.length === 0 ? "" : CartItem.length}</span>
+                <span>{cartSize === 0 ? "" : cartSize}</span>
               </div>
             </div>
           </div>

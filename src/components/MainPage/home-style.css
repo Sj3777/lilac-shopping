@@ -79,6 +79,40 @@
   cursor: pointer;
 }
 
+.home_Slide{
+  width: 100%;
+  margin-bottom: 50px;
+  padding: 20px;
+  border-radius:20px;
+}
+.home_container{
+  width: 90%;
+}
+.home_section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home_img{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  width: 80%;
+}
+.home_img img{
+  width: 200px;
+  height: 300px;
+}
+.left_items h1{
+  font-size: 50px;
+}
+.left_items p{
+  font-size: 18px;
+}
+.left_items button{
+  margin-top: 18px;
+}
 /*---------category----------*/
 @media screen and (max-width: 480px){
   

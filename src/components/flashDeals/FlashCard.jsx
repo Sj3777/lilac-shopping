@@ -1,22 +1,25 @@
 import React, { useState, useEffect } from "react";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { AiFillStar } from "react-icons/ai";
 import { FiPlus } from "react-icons/fi";
 // import { BiPlus } from 'react-icons/bi'
-
 import "./flash-style.css";
-import { useDispatch } from "react-redux";
-import { addToCart } from "../../redux/actions/cartAction";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart, addProductToCart } from "../../redux/actions/cartAction";
 // import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
 
 const FlashCard = ({ item }) => {
   const dispatch = useDispatch();
-  const addtocardhandler = () => {
+  const addItemToCartHandler = () => {
     // e.preventDefault();
     console.log("cart item is clicked", item);
-    dispatch(addToCart(item._id, item.p_qty))
+    const cred = {
+      product_id: item._id,
+      cart_action: true,
+    };
+    console.log("cart item is clicked", cred);
+    dispatch(addProductToCart(cred));
   };
 
   return (
@@ -26,7 +29,6 @@ const FlashCard = ({ item }) => {
           <span className="discount">{item.discount}% Off</span>
           <img className="prod_img" src={item.p_image} alt="" />
           <div className="product-like">
-            <label></label> <br />
             <i className="fa-regular fa-heart"></i>
           </div>
         </div>
@@ -44,8 +46,8 @@ const FlashCard = ({ item }) => {
             {/* step : 3  
                      if hami le button ma click garryo bahne 
                     */}
-            <button onClick={addtocardhandler}>
-              <FiPlus />
+            <button className="add_btn" onClick={addItemToCartHandler}>
+             Add to cart
             </button>
           </div>
         </div>

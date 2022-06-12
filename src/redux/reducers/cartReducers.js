@@ -51,3 +51,53 @@ export const listCartItemsReducers = ( state = { cartItems: [] }, action ) => {
             return state;
     }
 }
+
+export const addItemToCartReducer = (state = { newCartItem: []}, action) => {
+    console.log("-------cart reducers", ...state.cartItems)
+    switch (action.type) {
+        case actionTypes.ADD_TO_CART_REQUEST:
+            return {
+                ...state,
+                cartItems: [...state.cartItems, action.payload]
+            }
+        case actionTypes.ADD_TO_CART_SUCCESS:
+            return {
+                loading: false,
+                newCartItem: action.payload
+            }
+        case actionTypes.ADD_TO_CART_FAILURE:
+            return {
+                loading: false,
+                error: action.payload
+            }
+        default:
+            return state;
+    }
+}
+
+export const removeItemFromCartReducer = (state = { newCartItem: []}, action) => {
+    // console.log("-------cart reducers", state.cartItems)
+    switch (action.type) {
+        case actionTypes.REMOVE_FROM_CART_REQUEST:
+            return {
+                ...state,
+                // cartItems: [...state.cartItems, action.payload]
+            }
+        case actionTypes.REMOVE_FROM_CART_SUCCESS:
+            // const newItems = state.cartItems.filter((x) => {
+            //    return x._id !== action.payload._id
+            // })
+            return {
+                loading: false,
+                newCartItem: action.payload
+            }
+        case actionTypes.REMOVE_FROM_CART_FAILURE:
+            return {
+                loading: false,
+                error: action.payload
+            }
+        default:
+            return state;
+    }
+}
+

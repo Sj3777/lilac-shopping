@@ -11,19 +11,19 @@ import axios from 'axios'
 export default function () {
 
   const [productItems, setProduct] = useState([])
-  useEffect(() => {
-    getProduct();
-  }, [])
+  // useEffect(() => {
+  //   getProduct();
+  // }, [])
 
-  const getProduct = () => {
-    let url = `${API.production}/product/get-product`;
-    axios.get(url).then((res) => {
-      console.log("api res----", res.data.Data)
-      setProduct(res.data.Data)
-    }).catch((err) => {
-      console.log("-----errr", err)
-    })
-  }
+  // const getProduct = () => {
+  //   let url = `${API.production}/product/get-product`;
+  //   axios.get(url).then((res) => {
+  //     console.log("api res----", res.data.Data)
+  //     setProduct(res.data.Data)
+  //   }).catch((err) => {
+  //     console.log("-----errr", err)
+  //   })
+  // }
 
   //Step 1 :
   // const { productItems } = Data
@@ -72,7 +72,7 @@ export default function () {
   }
   return (
     <>
-      <Header CartItem={CartItem} />
+      <Header />
       <Routes>  
         <Route path='/' exact element={
           <Pages

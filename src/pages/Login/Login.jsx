@@ -44,7 +44,7 @@ export default function Login() {
         title: res.data.message
       })
       // dispatchEvent({action: , data: })
-      history("/shop");
+      history("/");
     }).catch((err) => {
       Toast.fire({
         icon: 'error',

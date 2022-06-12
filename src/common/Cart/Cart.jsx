@@ -29,7 +29,7 @@ const Cart = () => {
 
   const dispatch = useDispatch();
   const getCart = useSelector((state) => state.cartItemList);
-  console.log("redux succcesss FROM FLASH for cart----->", getCart);
+  console.log("redux succcesss FROM FLASH for cart----->", getCart.cartItems);
   useEffect(() => {
     dispatch(listCartItems());
   }, [dispatch]);

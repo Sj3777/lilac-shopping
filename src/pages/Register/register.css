@@ -7,10 +7,12 @@
     position: absolute;
     border-radius: 20px;
     display: flexbox;
+    box-shadow: 5px 5px #e2e2e2;
   }
   
   .main_login_container {
-    background-image: linear-gradient(to left bottom, #e3dca0, #f5c78e, #ffb08d, #ff999d, #ff89b9, #ff86b5, #ff84b0, #ff81ac, #ff9282, #ffb261, #dfd55d, #a3f386);
+    background-color: rgb(243, 238, 238);
+    /* background-image: linear-gradient(to left bottom, #e3dca0, #f5c78e, #ffb08d, #ff999d, #ff89b9, #ff86b5, #ff84b0, #ff81ac, #ff9282, #ffb261, #dfd55d, #a3f386); */
     width: 100vw;
     height: 100vh;
     display: flex;

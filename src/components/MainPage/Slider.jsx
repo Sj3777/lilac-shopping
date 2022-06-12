@@ -4,7 +4,7 @@ import SlideCard from "./SlideCard"
 const SliderHome = () => {
   return (
     <>
-      <section className='homeSlide contentWidth'>
+      <section className='home_Slide contentWidth'>
         <div className='container'>
           <SlideCard />
         </div>

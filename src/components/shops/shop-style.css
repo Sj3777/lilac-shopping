@@ -57,3 +57,17 @@
 .shop .product:hover {
   box-shadow: rgb(43 52 69 / 10%) 0px 4px 16px;
 }
+
+.product_view{
+  background-color: #ffff;
+  border-radius: 20px;
+  padding: 10px;
+}
+.product_content{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px;
+}
+.shop_cont{
+  width: 100%;
+}
