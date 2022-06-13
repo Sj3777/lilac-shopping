@@ -26,7 +26,7 @@ const FlashCard = ({ item }) => {
     <div className="box_flash">
       <div className="product_flash">
         <div className="img">
-          <span className="discount">{item.discount}% Off</span>
+          <span className="discount">{item.p_qty} items left</span>
           <img className="prod_img" src={item.p_image} alt="" />
           <div className="product-like">
             <i className="fa-regular fa-heart"></i>
