@@ -63,7 +63,7 @@ const Search = () => {
           </div>
 
           <div className="icon f_flex width">
-            <div className="cart">
+            <div className="profile"  >
               <IconButton
                 onClick={handleClick}
                 size="small"
@@ -72,8 +72,9 @@ const Search = () => {
                 aria-haspopup="true"
                 aria-expanded={open ? "true" : undefined}
               >
-                <IoPersonSharp className="search_icon" />
+                <IoPersonSharp  className="search_icon" />
               </IconButton>
+              
               <Menu
                 anchorEl={anchorEl}
                 id="account-menu"

@@ -25,11 +25,11 @@
     width: 0%;
   }
   .search-box {
-    width: 70%;
+    width: 60%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     /*padding: 10px;*/
     border-radius: 50px;
-    height: auto;
+    height: 50px;
   }
   .search-box i {
     width: 5%;
@@ -44,7 +44,7 @@
     padding: 9px;
     width: 3vw;
     height: 35px;
-    margin-top: 3px;
+    margin-top: 4px;
     margin-left: 10px;
   }
   .search-box input {
@@ -90,7 +90,7 @@
     padding: 9px;
     width: 3vw;
     height: 35px;
-    margin-top: 3px;
+    margin-top: 0px;
     margin-left: 10px;
   }
   .cart div{
@@ -200,4 +200,14 @@
     .header.active {
       height: 10vh;
     }
+  }
+  .profie{
+    color: black;
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+    padding: 5px;
+    margin-bottom: 15px;
+    background-color:#3187f1;
+    border-radius: 50%;
   }
