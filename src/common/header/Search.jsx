@@ -43,10 +43,10 @@ const Search = () => {
   const logout = () => {
     console.log("----logout")
     localStorage.removeItem('user')
-    history('/login')
+    history('/')
   }
   const goHome = () => {
-    history('/')
+    history('/shop')
   }
   return (
     <>

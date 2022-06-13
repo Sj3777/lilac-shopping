@@ -5,7 +5,7 @@ import "./shop-style.css"
 import {FaHotjar} from 'react-icons/fa'
 import { useSelector, useDispatch } from "react-redux";
 import { getProducts as AllProducts } from "../../redux/actions/productAction";
-const Shop = ({ addToCart, shopItems }) => {
+const Shop = () => {
   const dispatch = useDispatch();
   const getProducts = useSelector((state) => state.getProducts);
   console.log("redux succcesss FROM FLASH----->", getProducts);

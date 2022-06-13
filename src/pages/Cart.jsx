@@ -71,7 +71,7 @@ export default function () {
   
   return (
     <>
-      <Header CartItem={cartItem} />
+      <Header />
       <Routes>  
         <Route path='/' exact element={<Cart />}>
         </Route>

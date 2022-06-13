@@ -15,7 +15,7 @@ export default function Register() {
   const pic = 'https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2015%2F10%2F05%2F22%2F37%2Fblank-profile-picture-973460__340.png&imgrefurl=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fuser%2F&tbnid=ksweUyHJewvXXM&vet=12ahUKEwjV77jUrof4AhXD_TgGHa0FCjUQMygAegUIARDaAQ..i&docid=rmmzhVPJUKwfiM&w=340&h=340&q=user%20pic&ved=2ahUKEwjV77jUrof4AhXD_TgGHa0FCjUQMygAegUIARDaAQ'
   const history = useNavigate()
   const goSignin = () => {
-    history('/login')
+    history('/')
   }
   const handleRegister=(e)=>{
     e.preventDefault();
