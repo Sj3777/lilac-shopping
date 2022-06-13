@@ -119,6 +119,17 @@ button {
   color: #fff;
   margin: 10px;
 }
+.discount2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #e9c845;
+  padding: 3px 10px;
+  font-size: 12px;
+  border-radius: 50px;
+  color: #fff;
+  margin: 10px;
+}
 
 /*---------product-----------*/
 .product {
