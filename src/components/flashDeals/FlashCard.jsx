@@ -8,6 +8,7 @@ import "./flash-style.css";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, addProductToCart } from "../../redux/actions/cartAction";
 // import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
+import Swal from 'sweetalert2';
 
 const FlashCard = ({ item }) => {
   const dispatch = useDispatch();
@@ -22,11 +23,38 @@ const FlashCard = ({ item }) => {
     dispatch(addProductToCart(cred));
   };
 
+
+const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 3000,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.addEventListener('mouseenter', Swal.stopTimer)
+    toast.addEventListener('mouseleave', Swal.resumeTimer)
+  }
+})
+
+const outOfStock = () => {
+  Toast.fire({
+    icon: 'error',
+    title: "Item is Out of Stock"
+  })
+}
+
   return (
     <div className="box_flash">
       <div className="product_flash">
         <div className="img">
-          <span className="discount">{item.p_qty} items left</span>
+        {
+          item.p_qty >= 1 ? (
+            <span className="discount">{item.p_qty} items left</span>
+          ) : (
+            <span className="discount2">Out of Stock</span>
+          )
+        }
+          
           <img className="prod_img" src={item.p_image} alt="" />
           <div className="product-like">
             <i className="fa-regular fa-heart"></i>
@@ -46,9 +74,17 @@ const FlashCard = ({ item }) => {
             {/* step : 3  
                      if hami le button ma click garryo bahne 
                     */}
-            <button className="add_btn" onClick={addItemToCartHandler}>
+            {
+              item.p_qty >= 1 ? (
+                <button className="add_btn" onClick={addItemToCartHandler}>
              Add to cart
             </button>
+              ) : (
+                <button className="add_btn" onClick={outOfStock}>
+             Add to cart
+            </button>
+              )
+            }
           </div>
         </div>
       </div>
